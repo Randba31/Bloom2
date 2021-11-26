@@ -3,6 +3,7 @@ package com.example.bloom2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -26,7 +27,7 @@ public class SignUpActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
         setContentView(R.layout.activity_main);
-        etusername=findViewById(R.id.etUsernameSignup);
+        etusername=findViewById(R.id.etusernameSignup);
         etpassword=findViewById(R.id.etPasswordSignup);
         utls= UtilitiesClass.getInstance();
         fbs=FirebaseServicesClass.getInstance();
@@ -54,8 +55,8 @@ public class SignUpActivity extends AppCompatActivity {
                                 if (task.isSuccessful())
                                 {
 
-                                    // Intent i=new Intent(this.MainPage.class)//the page isn't available right now
-                                    //  startActivity(i);
+                                     Intent i=new Intent(SignUpActivity.this, MainPageActivity.class);//the page isn't available right now
+                                    startActivity(i);
                                 }
                                 else
                                 {

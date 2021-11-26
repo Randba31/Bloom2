@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    android:backgroundTint="@color/Background"
+    tools:context=".MainPageActivity" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="376dp"
+        android:layout_height="318dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="145dp"
+        android:autoText="false"
+        android:text="Time  management  is  an  important  effective  skill  most  people  lack  these  days ,  and  BLOOM  is  here  to  help  you   manage  your  time  to  have  an  healthy  productive  day ,  and  it  gives  you  an  opportunity  to  speak  about  it  and  clear  your  mind <3"
+        android:textColor="@color/Brownish"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/GoToAddbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="163dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="124dp"
+        android:contentDescription="TODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <Button
+        android:id="@+id/GoToAddbtn"
+        style="@android:style/Widget.Button"
+        android:layout_width="159dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="236dp"
+        android:layout_marginTop="145dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/Brownish"
+        android:onClick="GoToAddbtn"
+        android:text="Start Blooming"
+        android:textColor="@color/Background"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

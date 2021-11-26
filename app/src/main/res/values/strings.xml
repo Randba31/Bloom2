@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Bloom2</string>
+    <string name="err_fields_empty">Some fields are empty !</string>
+    <string name="successfully_registered">You have Successfully registered</string>
+    <string name="successfully_loged">You have Successfully logged in </string>
+    <string name="successfully_signed">You have Successfully signed in </string>
 </resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    android:backgroundTint="@color/Background"
+    tools:context=".AddTaskActivity">
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="278dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="95dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Add your tasks for today "
+        android:textColor="@color/Brownish"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etTime"
+        android:layout_width="279dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="66dp"
+        android:ems="10"
+        android:hint="Time"
+        android:inputType="time"
+        android:textColor="@color/Brownish"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTask" />
+
+    <Button
+        android:id="@+id/AddTask"
+        android:onClick="AddTask"
+        style="@android:style/Widget.Button"
+        android:layout_width="86dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="261dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="116dp"
+        android:backgroundTint="@color/Brownish"
+        android:text="Add Task "
+        android:textColor="@color/Background"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Finishbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTime" />
+
+    <Button
+        android:id="@+id/Finishbtn"
+        style="@android:style/Widget.Button"
+        android:layout_width="86dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="261dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="116dp"
+        android:backgroundTint="@color/Brownish"
+        android:text="That's it"
+        android:textAlignment="center"
+        android:textColor="@color/Background"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTime" />
+
+    <EditText
+        android:id="@+id/etTask"
+        android:onClick="Finish"
+        android:layout_width="279dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="66dp"
+        android:ems="10"
+        android:hint="Task"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/Brownish"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
