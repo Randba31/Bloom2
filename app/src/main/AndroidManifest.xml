@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bloom2">
         <activity
+            android:name=".RcyclerViewTasks"
+            android:exported="false" />
+        <activity
             android:name=".AddTaskActivity"
             android:exported="false" />
         <activity
