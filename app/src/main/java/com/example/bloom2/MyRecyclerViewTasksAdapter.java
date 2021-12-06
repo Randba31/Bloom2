@@ -1,42 +1,40 @@
 package com.example.bloom2;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.google.android.gms.tasks.Task;
-import com.google.android.gms.tasks.Tasks;
-
-import java.util.ArrayList;
 import java.util.List;
 
-public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.ViewHolder> {
-    private List<TimeMangClass> mData;
+public class MyRecyclerViewTasksAdapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     private LayoutInflater mInflater;
-    private TasksAdapter.ItemClickListener mClickListener;
+    private Adapter.ItemClickListener mClickListener;
+    private List<TimeMangClass> mData;
 
     // data is passed into the constructor
-    TasksAdapter(Context context, List<TimeMangClass> data) {
+    MyRecyclerViewTasksAdapter(Context context, List<TimeMangClass> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
     }
 
     // inflates the row layout from xml when needed
     @Override
-    public TasksAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public Adapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.row, parent, false);
-        return new TasksAdapter.ViewHolder(view);
+        return new Adapter.ViewHolder(view);
     }
 
     // binds the data to the TextView in each row
     @Override
-    public void onBindViewHolder(TasksAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(Adapter.ViewHolder holder, int position) {
         TimeMangClass task = mData.get(position);
-        holder.tvName.setText(task.getTask());
+        holder.tvNameTaskRow.setText(task.getTask());
         //holder.ivPhoto.setImageDrawable(rest.getPhoto());
     }
 
@@ -70,7 +68,7 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.ViewHolder> 
     }
 
     // allows clicks events to be caught
-    void setClickListener(TasksAdapter.ItemClickListener itemClickListener) {
+    void setClickListener(Adapter.ItemClickListener itemClickListener) {
         this.mClickListener = itemClickListener;
     }
 
@@ -81,6 +79,14 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.ViewHolder> 
 
 
 }
+
+
+
+
+
+
+
+
 
 
 
