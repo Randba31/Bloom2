@@ -20,7 +20,7 @@ public class MainPageActivity extends AppCompatActivity {
     }
 
     public void GoToAddbtn(View view) {
-        Intent i=new Intent(MainPageActivity.this, AddTaskActivity.class);//the page isn't available right now
+        Intent i=new Intent(MainPageActivity.this, AddTaskActivity.class);
         startActivity(i);
     }
 }

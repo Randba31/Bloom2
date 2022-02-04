@@ -16,8 +16,8 @@
         android:layout_marginTop="23dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="145dp"
-        android:autoText="false"
-        android:text="Time  management  is  an  important  effective  skill  most  people  lack  these  days ,  and  BLOOM  is  here  to  help  you   manage  your  time  to  have  an  healthy  productive  day ,  and  it  gives  you  an  opportunity  to  speak  about  it  and  clear  your  mind <3"
+        android:autoText="true"
+        android:text="Time  management  is  an  important  effective  skill  most  people  lack  these  days ,  and  BLOOM  is  here  to  help  you   manage  your  time  to  have  an  healthy  productive  day ,  and  it  gives  you  an  opportunity  to  speak  about  it  and  clear  your  mind"
         android:textColor="@color/Brownish"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/GoToAddbtn"
@@ -36,7 +36,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:srcCompat="@mipmap/ic_launchr"
+        tools:ignore="ImageContrastCheck" />
 
     <Button
         android:id="@+id/GoToAddbtn"

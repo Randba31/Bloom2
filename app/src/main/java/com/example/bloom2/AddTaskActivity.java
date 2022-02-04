@@ -52,8 +52,8 @@ public class AddTaskActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
                         Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
-                        //Intent i=new Intent(AddTaskActivity.this, AddTaskActivity.class);
-                        //startActivity(i);
+                        Intent i=new Intent(AddTaskActivity.this, AddTaskActivity.class);
+                        startActivity(i);
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -84,8 +84,8 @@ public class AddTaskActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
                         Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
-                        //Intent i=new Intent(AddTaskActivity.this,AddTaskActivity.class);
-                        //startActivity(i);
+                        Intent i=new Intent(AddTaskActivity.this,AddTaskActivity.class);
+                        startActivity(i);
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {

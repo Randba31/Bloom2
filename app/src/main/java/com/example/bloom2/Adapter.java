@@ -17,7 +17,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     private List<TimeMangClass> mData;
     private LayoutInflater mInflater;
     private static Adapter.ItemClickListener mClickListener;
-
     // data is passed into the constructor
     Adapter(Context context, List<TimeMangClass> data) {
         this.mInflater = LayoutInflater.from(context);
