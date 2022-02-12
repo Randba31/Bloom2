@@ -4,4 +4,6 @@
     <string name="successfully_registered">You have Successfully registered</string>
     <string name="successfully_loged">You have Successfully logged in </string>
     <string name="successfully_signed">You have Successfully signed in </string>
+    <string name="todo">TODO</string>
+    <string name="let_s_bloom">Let\'s Bloom</string>
 </resources>

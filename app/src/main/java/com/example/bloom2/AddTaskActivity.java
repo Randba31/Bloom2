@@ -43,7 +43,7 @@ public class AddTaskActivity extends AppCompatActivity {
         {
             Toast.makeText(this,R.string.err_fields_empty, Toast.LENGTH_SHORT).show();
         }
-        TimeMangClass task=new TimeMangClass(Task,Time);
+        TaskClass task=new TaskClass(Task,Time);
 
         //adding to firebase
         fbs.getFire().collection("Tasks")
@@ -75,7 +75,7 @@ public class AddTaskActivity extends AppCompatActivity {
         {
             Toast.makeText(this, "Empty ", Toast.LENGTH_SHORT).show();
         }
-        TimeMangClass task=new TimeMangClass(Task,Time);
+        TaskClass task=new TaskClass(Task,Time);
 
         //adding to firebase
         fbs.getFire().collection("Tasks")

@@ -1,13 +1,13 @@
 package com.example.bloom2;
 
-public class TimeMangClass {
+public class TaskClass {
 
 
     private  String Time;
     private  String Task ;
 
 
-    public TimeMangClass(String time, String task) {
+    public TaskClass(String time, String task) {
         Time = time;
         Task = task;
     }

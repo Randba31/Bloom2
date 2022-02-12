@@ -7,6 +7,7 @@
     tools:context=".AllTasksActivity">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAllTask"
         android:layout_width="409dp"
         android:layout_height="729dp"
         android:layout_marginStart="1dp"

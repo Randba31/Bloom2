@@ -8,19 +8,27 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.tasks.Task;
-
 import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
-    private List<TimeMangClass> mData;
+    private List<TaskClass> mData;
     private LayoutInflater mInflater;
-    private static Adapter.ItemClickListener mClickListener;
+    private Context context;
+    private final Adapter.ItemClickListener mClickListener = new ItemClickListener() {
+        @Override
+        public void onItemClick(View view, int position) {
+            //get Task data
+            TaskClass task= mData.get(position);
+
+        }
+    };
+
     // data is passed into the constructor
-    Adapter(Context context, List<TimeMangClass> data) {
+    Adapter(Context context, List<TaskClass> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
+        this.context=context;
     }
 
     // inflates the row layout from xml when needed
@@ -33,7 +41,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     // binds the data to the TextView in each row
     @Override
     public void onBindViewHolder(Adapter.ViewHolder holder, int position) {
-        TimeMangClass task = mData.get(position);
+        TaskClass task = mData.get(position);
         holder.tvNameTaskRow.setText(task.getTask());
         //holder.ivPhoto.setImageDrawable(rest.getPhoto());
     }
@@ -64,7 +72,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
     // convenience method for getting data at click position
-    TimeMangClass getItem(int id) {
+    TaskClass getItem(int id) {
         return mData.get(id);
     }
 
