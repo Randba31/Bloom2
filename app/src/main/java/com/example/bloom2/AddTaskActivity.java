@@ -17,7 +17,7 @@ import com.google.firebase.firestore.DocumentReference;
 
 public class AddTaskActivity extends AppCompatActivity {
 
-    public EditText etTime , etTask;
+    public EditText etTime , etTask , etPlace;
     private FirebaseServicesClass fbs;
     private static final String TAG = "AddRestActivity";
 
@@ -30,20 +30,22 @@ public class AddTaskActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         etTime=findViewById(R.id.etTime);
         etTask=findViewById(R.id.etTask);
+        etPlace=findViewById(R.id.etPlace);
     }
 
 
 
     public void AddTask(View view) {
-        String Time,Task;
+        String Time,Task,Place;
         Time= etTime.getText().toString();
         Task=etTask.getText().toString();
+        Place=etPlace.getText().toString();
         //checking if empty
-        if (Time.trim().isEmpty()|| Task.trim().isEmpty())
+        if (Time.trim().isEmpty()|| Task.trim().isEmpty()||Place.trim().isEmpty())
         {
             Toast.makeText(this,R.string.err_fields_empty, Toast.LENGTH_SHORT).show();
         }
-        TaskClass task=new TaskClass(Task,Time);
+        TaskClass task=new TaskClass(Task,Time,Place);
 
         //adding to firebase
         fbs.getFire().collection("Tasks")
@@ -67,15 +69,16 @@ public class AddTaskActivity extends AppCompatActivity {
 
 
     public void Finish(View view) {
-        String Time,Task;
+        String Time,Task,Place;
         Time= etTime.getText().toString();
         Task=etTask.getText().toString();
+        Place=etPlace.getText().toString();
         //checking if empty
-        if (Time.trim().isEmpty()|| Task.trim().isEmpty())
+        if (Time.trim().isEmpty()|| Task.trim().isEmpty()||Place.trim().isEmpty())
         {
             Toast.makeText(this, "Empty ", Toast.LENGTH_SHORT).show();
         }
-        TaskClass task=new TaskClass(Task,Time);
+        TaskClass task=new TaskClass(Task,Time,Place);
 
         //adding to firebase
         fbs.getFire().collection("Tasks")

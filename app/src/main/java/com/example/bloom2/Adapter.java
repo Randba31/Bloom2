@@ -1,6 +1,7 @@
 package com.example.bloom2;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.Serializable;
 import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
@@ -20,7 +22,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         public void onItemClick(View view, int position) {
             //get Task data
             TaskClass task= mData.get(position);
-
+            //upload tasks data
+            //goto details activity
+            Intent i=new Intent(context,TaskDetailsActivity.class);
+            i.putExtra("task",(Serializable) task);
+            context.startActivity(i);
         }
     };
 
@@ -43,7 +49,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     public void onBindViewHolder(Adapter.ViewHolder holder, int position) {
         TaskClass task = mData.get(position);
         holder.tvNameTaskRow.setText(task.getTask());
-        //holder.ivPhoto.setImageDrawable(rest.getPhoto());
+
     }
 
     // total number of rows
@@ -54,7 +60,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
 
     // stores and recycles views as they are scrolled off screen
-    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView tvNameTaskRow;
 
 
@@ -77,9 +83,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
     // allows clicks events to be caught
+    /*
     void setClickListener(Adapter.ItemClickListener itemClickListener) {
         this.mClickListener = itemClickListener;
-    }
+    }*/
 
     // parent activity will implement this method to respond to click events
     public interface ItemClickListener {
